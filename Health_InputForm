@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Community Health Monitoring</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#11d4d4",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#102222",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .form-select,
+        .form-input,
+        .form-textarea,
+        .form-checkbox {
+            --tw-ring-color: transparent !important;
+            --tw-ring-offset-shadow: none !important;
+            --tw-ring-shadow: none !important;
+            box-shadow: none !important;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-800 dark:text-slate-200">
+<div class="flex flex-col min-h-screen">
+<header class="bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm sticky top-0 z-20 border-b border-slate-200 dark:border-slate-800">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+<div class="flex items-center gap-4">
+<div class="text-primary size-8">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M42.4379 44C42.4379 44 36.0744 33.9038 41.1692 24C46.8624 12.9336 42.2078 4 42.2078 4L7.01134 4C7.01134 4 11.6577 12.932 5.96912 23.9969C0.876273 33.9029 7.27094 44 7.27094 44L42.4379 44Z" fill="currentColor"></path>
+</svg>
+</div>
+<h1 class="text-lg font-bold text-slate-900 dark:text-white">Community Health Monitoring</h1>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary transition-colors" href="#">Dashboard</a>
+<a class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary transition-colors" href="#">Reports</a>
+<a class="text-sm font-bold text-primary" href="#">Data Entry</a>
+<a class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary transition-colors" href="#">Settings</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full flex items-center gap-2 transition-colors">
+<span class="material-symbols-outlined">sos</span>
+<span>SOS</span>
+</button>
+<div class="relative">
+<button class="flex items-center gap-1 text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary transition-colors">
+<span class="material-symbols-outlined">language</span>
+<span class="text-sm font-medium">EN</span>
+<span class="material-symbols-outlined text-xs">expand_more</span>
+</button>
+</div>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC_YcyxvGkwkAIhl_Cy5mUve1AfhAPTA1ucr1-6Bjf9SVY0JA9VxsGAG-xGv2RHR6kIkAEmKydrWOFk7rKnToKehctl4yHoHStWlzaRi7nluxOuVSkHW4uw0MnlJeXIjjfbepOKgoFuepdJp40ieXGlpP31jzC-cOIky5RAyd5Y7OCWLJg7zYAipy8z7pOzTyCuK_2PdxQx9dNDaCiLEq7zb59ug9YrvdRq-7j06Du6v1qM5dOoGcbMUPwkiKdZZeskslvLIbGNLGX7");'></div>
+<button class="md:hidden text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+<div class="max-w-3xl mx-auto">
+<div class="mb-8 text-center">
+<h2 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white tracking-tight">Health Data Input Form</h2>
+<p class="mt-2 text-slate-600 dark:text-slate-400">Efficiently enter health metrics from the field.</p>
+</div>
+<div class="mb-8">
+<div class="border-b border-slate-200 dark:border-slate-800">
+<nav aria-label="Tabs" class="-mb-px flex justify-center space-x-8">
+<a class="border-primary text-primary whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm" href="#">English</a>
+<a class="border-transparent text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-300 hover:border-slate-300 dark:hover:border-slate-700 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm" href="#">हिन्दी</a>
+</nav>
+</div>
+</div>
+<div class="space-y-8 bg-background-light dark:bg-background-dark p-6 md:p-8 rounded-xl border border-slate-200 dark:border-slate-800">
+<section class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block text-sm font-medium text-slate-700 dark:text-slate-300" for="clinic">Select Clinic</label>
+<select class="mt-1 block w-full rounded-lg border-slate-300 dark:border-slate-700 bg-background-light dark:bg-background-dark text-slate-900 dark:text-white focus:border-primary focus:ring-primary" id="clinic" name="clinic">
+<option>Choose a clinic</option>
+<option>Clinic A</option>
+<option>Clinic B</option>
+</select>
+</div>
+<div>
+<label class="block text-sm font-medium text-slate-700 dark:text-slate-300" for="health-worker">Select Health Worker</label>
+<select class="mt-1 block w-full rounded-lg border-slate-300 dark:border-slate-700 bg-background-light dark:bg-background-dark text-slate-900 dark:text-white focus:border-primary focus:ring-primary" id="health-worker" name="health-worker">
+<option>Choose a health worker</option>
+<option>Asha Rai</option>
+<option>Bimla Devi</option>
+</select>
+</div>
+<div class="md:col-span-2">
+<label class="block text-sm font-medium text-slate-700 dark:text-slate-300" for="date">Date</label>
+<input class="mt-1 block w-full rounded-lg border-slate-300 dark:border-slate-700 bg-background-light dark:bg-background-dark text-slate-900 dark:text-white focus:border-primary focus:ring-primary" id="date" name="date" type="date" value="2024-05-21"/>
+</div>
+</section>
+<hr class="border-slate-200 dark:border-slate-800"/>
+<section>
+<h3 class="text-lg font-semibold leading-6 text-slate-900 dark:text-white mb-4">Patient Information</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block text-sm font-medium text-slate-700 dark:text-slate-300" for="patient-name">Patient Name</label>
+<input class="mt-1 block w-full rounded-lg border-slate-300 dark:border-slate-700 bg-background-light dark:bg-background-dark text-slate-900 dark:text-white focus:border-primary focus:ring-primary" id="patient-name" name="patient-name" placeholder="e.g. John Doe" type="text"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-slate-700 dark:text-slate-300" for="age">Age</label>
+<input class="mt-1 block w-full rounded-lg border-slate-300 dark:border-slate-700 bg-background-light dark:bg-background-dark text-slate-900 dark:text-white focus:border-primary focus:ring-primary" id="age" name="age" placeholder="e.g. 34" type="number"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-slate-700 dark:text-slate-300" for="gender">Gender</label>
+<select class="mt-1 block w-full rounded-lg border-slate-300 dark:border-slate-700 bg-background-light dark:bg-background-dark text-slate-900 dark:text-white focus:border-primary focus:ring-primary" id="gender" name="gender">
+<option>Select gender</option>
+<option>Male</option>
+<option>Female</option>
+<option>Other</option>
+</select>
+</div>
+</div>
+</section>
+<section>
+<h3 class="text-lg font-semibold leading-6 text-slate-900 dark:text-white mb-4">Symptoms</h3>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+<label class="flex items-center space-x-3 p-3 rounded-lg bg-background-light dark:bg-slate-800/50 border border-slate-200 dark:border-slate-800">
+<input class="h-4 w-4 rounded border-slate-300 dark:border-slate-700 text-primary focus:ring-primary bg-background-light dark:bg-slate-900" name="symptoms" type="checkbox" value="fever"/>
+<span class="text-sm font-medium text-slate-700 dark:text-slate-300">Fever</span>
+</label>
+<label class="flex items-center space-x-3 p-3 rounded-lg bg-background-light dark:bg-slate-800/50 border border-slate-200 dark:border-slate-800">
+<input class="h-4 w-4 rounded border-slate-300 dark:border-slate-700 text-primary focus:ring-primary bg-background-light dark:bg-slate-900" name="symptoms" type="checkbox" value="diarrhea"/>
+<span class="text-sm font-medium text-slate-700 dark:text-slate-300">Diarrhea</span>
+</label>
+<label class="flex items-center space-x-3 p-3 rounded-lg bg-background-light dark:bg-slate-800/50 border border-slate-200 dark:border-slate-800">
+<input class="h-4 w-4 rounded border-slate-300 dark:border-slate-700 text-primary focus:ring-primary bg-background-light dark:bg-slate-900" name="symptoms" type="checkbox" value="vomiting"/>
+<span class="text-sm font-medium text-slate-700 dark:text-slate-300">Vomiting</span>
+</label>
+<label class="flex items-center space-x-3 p-3 rounded-lg bg-background-light dark:bg-slate-800/50 border border-slate-200 dark:border-slate-800">
+<input class="h-4 w-4 rounded border-slate-300 dark:border-slate-700 text-primary focus:ring-primary bg-background-light dark:bg-slate-900" name="symptoms" type="checkbox" value="abdominal_pain"/>
+<span class="text-sm font-medium text-slate-700 dark:text-slate-300">Abdominal Pain</span>
+</label>
+<label class="flex items-center space-x-3 p-3 rounded-lg bg-background-light dark:bg-slate-800/50 border border-slate-200 dark:border-slate-800">
+<input class="h-4 w-4 rounded border-slate-300 dark:border-slate-700 text-primary focus:ring-primary bg-background-light dark:bg-slate-900" name="symptoms" type="checkbox" value="dehydration"/>
+<span class="text-sm font-medium text-slate-700 dark:text-slate-300">Dehydration</span>
+</label>
+</div>
+</section>
+<section>
+<h3 class="text-lg font-semibold leading-6 text-slate-900 dark:text-white mb-4">Water Quality Report</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block text-sm font-medium text-slate-700 dark:text-slate-300" for="water-source">Water Source</label>
+<input class="mt-1 block w-full rounded-lg border-slate-300 dark:border-slate-700 bg-background-light dark:bg-background-dark text-slate-900 dark:text-white focus:border-primary focus:ring-primary" id="water-source" name="water-source" placeholder="e.g. Village well" type="text"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-slate-700 dark:text-slate-300" for="turbidity">Turbidity (NTU)</label>
+<input class="mt-1 block w-full rounded-lg border-slate-300 dark:border-slate-700 bg-background-light dark:bg-background-dark text-slate-900 dark:text-white focus:border-primary focus:ring-primary" id="turbidity" name="turbidity" placeholder="e.g. 5" type="number"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-slate-700 dark:text-slate-300" for="ph-level">pH Level</label>
+<input class="mt-1 block w-full rounded-lg border-slate-300 dark:border-slate-700 bg-background-light dark:bg-background-dark text-slate-900 dark:text-white focus:border-primary focus:ring-primary" id="ph-level" name="ph-level" placeholder="e.g. 7.2" step="0.1" type="number"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-slate-700 dark:text-slate-300" for="ecoli">E. coli Presence</label>
+<select class="mt-1 block w-full rounded-lg border-slate-300 dark:border-slate-700 bg-background-light dark:bg-background-dark text-slate-900 dark:text-white focus:border-primary focus:ring-primary" id="ecoli" name="ecoli">
+<option>Select status</option>
+<option value="present">Present</option>
+<option value="absent">Absent</option>
+</select>
+</div>
+</div>
+</section>
+<section>
+<h3 class="text-lg font-semibold leading-6 text-slate-900 dark:text-white mb-4">Additional Notes</h3>
+<div>
+<label class="sr-only" for="notes">Notes</label>
+<textarea class="block w-full rounded-lg border-slate-300 dark:border-slate-700 bg-background-light dark:bg-background-dark text-slate-900 dark:text-white focus:border-primary focus:ring-primary" id="notes" name="notes" placeholder="Enter any additional notes or observations..." rows="4"></textarea>
+</div>
+</section>
+<div class="flex justify-end pt-4">
+<button class="inline-flex justify-center rounded-lg py-2 px-6 text-sm font-semibold shadow-sm bg-primary text-slate-900 hover:bg-primary/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-colors" type="submit">
+                            Submit Data
+                        </button>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>
