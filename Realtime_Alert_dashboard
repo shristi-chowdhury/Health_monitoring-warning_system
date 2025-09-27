@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Community Health Monitoring</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#11d4d4",
+              "background-light": "#f6f8f8",
+              "background-dark": "#102222",
+            },
+            fontFamily: {
+              display: ["Inter"],
+            },
+            borderRadius: { DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px" },
+          },
+        },
+      };
+    </script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+<div class="flex min-h-screen">
+<aside class="w-64 bg-white/5 dark:bg-black/5 p-4 flex flex-col justify-between">
+<div>
+<h1 class="text-xl font-bold mb-8 text-gray-800 dark:text-gray-100">Community Health Monitor</h1>
+<nav class="flex flex-col space-y-2">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-primary/20 transition-colors" href="#">
+<span class="material-symbols-outlined text-gray-600 dark:text-gray-400">dashboard</span>
+<span class="text-sm font-medium text-gray-700 dark:text-gray-300">Dashboard / डैशबोर्ड</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/20 text-primary" href="#">
+<span class="material-symbols-outlined">notifications_active</span>
+<span class="text-sm font-medium">Alerts / अलर्ट</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-primary/20 transition-colors" href="#">
+<span class="material-symbols-outlined text-gray-600 dark:text-gray-400">bar_chart</span>
+<span class="text-sm font-medium text-gray-700 dark:text-gray-300">Reports / रिपोर्ट</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-primary/20 transition-colors" href="#">
+<span class="material-symbols-outlined text-gray-600 dark:text-gray-400">menu_book</span>
+<span class="text-sm font-medium text-gray-700 dark:text-gray-300">Resources / संसाधन</span>
+</a>
+</nav>
+</div>
+<div class="flex flex-col space-y-2">
+<div class="relative">
+<button class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-primary/20 transition-colors w-full text-left">
+<span class="material-symbols-outlined text-gray-600 dark:text-gray-400">language</span>
+<span class="text-sm font-medium text-gray-700 dark:text-gray-300">Language / भाषा</span>
+</button>
+</div>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-primary/20 transition-colors" href="#">
+<span class="material-symbols-outlined text-gray-600 dark:text-gray-400">settings</span>
+<span class="text-sm font-medium text-gray-700 dark:text-gray-300">Settings / सेटिंग्स</span>
+</a>
+</div>
+</aside>
+<main class="flex-1 p-8">
+<header class="mb-8 flex justify-between items-center">
+<h1 class="text-4xl font-bold text-gray-800 dark:text-gray-100">Real-Time Alerts / वास्तविक समय अलर्ट</h1>
+<div class="flex items-center gap-2">
+<button class="px-3 py-1 text-sm font-medium rounded-md bg-primary text-white">EN</button>
+<button class="px-3 py-1 text-sm font-medium rounded-md bg-transparent text-gray-500 hover:bg-primary/20">HI</button>
+</div>
+</header>
+<section class="mb-10">
+<h2 class="text-2xl font-bold mb-4 text-gray-800 dark:text-gray-200">Critical Alerts / महत्वपूर्ण अलर्ट</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="bg-white/10 dark:bg-black/10 rounded-lg shadow-md overflow-hidden border border-red-500/50">
+<div class="p-6">
+<h3 class="text-lg font-bold text-red-500 mb-2">Potential Cholera Outbreak in Village A / गांव A में हैजा फैलने की संभावना</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 mb-4">High number of reported cases in the last 24 hours. Immediate action required. / पिछले 24 घंटों में रिपोर्ट किए गए मामलों की अधिक संख्या। तत्काल कार्रवाई की आवश्यकता है।</p>
+<div class="w-full h-48 bg-center bg-no-repeat bg-cover rounded-lg" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDcFKTOvETpHwJLwmEs_XKzhIzjThUl6NwVUnX81u7VYwqpKDoLosux_FiDgcDSOu5DzCCzuqca-ncTfupB6VVB4rANzke_wxXzje8kwAdaG1oT045hRi9pKhx_b6Rkii_eb_6qh0jqZlNRqycomkYosir7dwMAMz9K1Yy__cr4mhsUIrVvvOqGelwnr-fHyCOUGreIP-t3u4dX5p_h1qp0bqu8lpGWRmuIcx0tooDHKu7W6hC4-lTpR6YAxj_y74lw5Fhkq3xfsc1g");'></div>
+<div class="mt-4 flex gap-4">
+<button class="flex-1 bg-primary text-white text-sm font-bold py-2 px-4 rounded-lg hover:bg-primary/90 transition-colors">Allocate Resources / संसाधन आवंटित करें</button>
+<button class="flex-1 bg-primary/20 text-primary text-sm font-bold py-2 px-4 rounded-lg hover:bg-primary/30 transition-colors">Track Intervention / हस्तक्षेप ट्रैक करें</button>
+</div>
+</div>
+</div>
+<div class="bg-white/10 dark:bg-black/10 rounded-lg shadow-md overflow-hidden border border-orange-500/50">
+<div class="p-6">
+<h3 class="text-lg font-bold text-orange-500 mb-2">Increased Malaria Cases in Village B / गांव B में मलेरिया के मामले बढ़े</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 mb-4">Significant rise in malaria cases reported. Resource allocation needed. / मलेरिया के मामलों में उल्लेखनीय वृद्धि दर्ज की गई। संसाधन आवंटन की आवश्यकता है।</p>
+<div class="w-full h-48 bg-center bg-no-repeat bg-cover rounded-lg" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCoTJd6lv4Xk0IiK8h5Jj0d3aS6NUwcCxxTKVFx4TQiByS7n0WXmDj7kyHdbp4umqiCNq2lUfuwbx8cnt74dK7qb7bVIHa7MgYsdSE6yAARLaoVZpsR9bZ8T_hjXUHHeYHT_gFvc9dYpQDcO-sYtGpNPqy-7l_e-IE5nR2qGI0yVB-HIkH0koEMxnC6DkUHYnPCNRb1wDM-v3ABuzAo6BpLMXh1I6ReZlE5_Km-X-zyPVKq6verxrBBvvzdZA_apWtF1vkZ592jO1OF");'></div>
+<div class="mt-4 flex gap-4">
+<button class="flex-1 bg-primary text-white text-sm font-bold py-2 px-4 rounded-lg hover:bg-primary/90 transition-colors">Allocate Resources / संसाधन आवंटित करें</button>
+<button class="flex-1 bg-primary/20 text-primary text-sm font-bold py-2 px-4 rounded-lg hover:bg-primary/30 transition-colors">Track Intervention / हस्तक्षेप ट्रैक करें</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section>
+<h2 class="text-2xl font-bold mb-4 text-gray-800 dark:text-gray-200">Recent Alerts / हाल के अलर्ट</h2>
+<div class="bg-white/10 dark:bg-black/10 rounded-lg shadow-md overflow-hidden">
+<div class="overflow-x-auto">
+<table class="w-full text-sm text-left">
+<thead class="text-xs text-gray-700 dark:text-gray-300 uppercase bg-primary/10 dark:bg-primary/20">
+<tr>
+<th class="px-6 py-3" scope="col">Date / दिनांक</th>
+<th class="px-6 py-3" scope="col">Village / गाँव</th>
+<th class="px-6 py-3" scope="col">Disease / रोग</th>
+<th class="px-6 py-3" scope="col">Status / स्थिति</th>
+<th class="px-6 py-3" scope="col">Actions / क्रियाएँ</th>
+</tr>
+</thead>
+<tbody>
+<tr class="border-b border-primary/10 dark:border-primary/20">
+<td class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">2024-07-26</td>
+<td class="px-6 py-4">Village C / गाँव C</td>
+<td class="px-6 py-4">Typhoid / टाइफाइड</td>
+<td class="px-6 py-4">
+<span class="px-3 py-1 text-xs font-medium rounded-full bg-yellow-500/20 text-yellow-500">Under Investigation / जांच चल रही है</span>
+</td>
+<td class="px-6 py-4"><a class="font-medium text-primary hover:underline" href="#">View Details / विवरण देखें</a></td>
+</tr>
+<tr class="border-b border-primary/10 dark:border-primary/20">
+<td class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">2024-07-25</td>
+<td class="px-6 py-4">Village D / गाँव D</td>
+<td class="px-6 py-4">Dysentery / पेचिश</td>
+<td class="px-6 py-4">
+<span class="px-3 py-1 text-xs font-medium rounded-full bg-green-500/20 text-green-500">Resolved / हल हो गया</span>
+</td>
+<td class="px-6 py-4"><a class="font-medium text-primary hover:underline" href="#">View Details / विवरण देखें</a></td>
+</tr>
+<tr>
+<td class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">2024-07-24</td>
+<td class="px-6 py-4">Village E / गाँव E</td>
+<td class="px-6 py-4">Hepatitis A / हेपेटाइटिस ए</td>
+<td class="px-6 py-4">
+<span class="px-3 py-1 text-xs font-medium rounded-full bg-blue-500/20 text-blue-500">Monitoring / निगरानी</span>
+</td>
+<td class="px-6 py-4"><a class="font-medium text-primary hover:underline" href="#">View Details / विवरण देखें</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+</main>
+</div>
+</body></html>
